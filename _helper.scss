@@ -1,0 +1,228 @@
+// Padding
+$minSpace: 0;
+$maxSpace: 50;
+
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .p-#{$i} {
+            padding: $i + px !important;
+        }
+    }
+}
+
+// Padding-top
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .pt-#{$i} {
+            padding-top: $i + px !important;
+        }
+    }
+}
+
+// Padding-bottom
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .pb-#{$i} {
+            padding-bottom: $i + px !important;
+        }
+    }
+}
+
+// Padding-right
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .pr-#{$i} {
+            padding-right: $i + px !important;
+        }
+    }
+}
+
+// Padding-left
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .pl-#{$i} {
+            padding-left: $i + px !important;
+        }
+    }
+}
+
+// Padding-left-right
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .p-lr-#{$i} {
+            padding-left: $i + px !important;
+            padding-right: $i + px !important;
+        }
+    }
+}
+
+// Padding-top-bottom
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .p-tb-#{$i} {
+            padding-top: $i + px !important;
+            padding-bottom: $i + px !important;
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------
+
+// Margin
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .m-#{$i} {
+            margin: $i + px !important;
+        }
+    }
+}
+
+// Margin-right
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .mr-#{$i} {
+            margin-right: $i + px !important;
+        }
+    }
+}
+
+// Margin-top
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .mt-#{$i} {
+            margin-top: $i + px !important;
+        }
+    }
+}
+
+// Margin-left
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .ml-#{$i} {
+            margin-left: $i + px !important;
+        }
+    }
+}
+
+// Margin-bottom
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .mb-#{$i} {
+            margin-bottom: $i + px !important;
+        }
+    }
+}
+
+// Margin-right-left
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .m-lr-#{$i} {
+            margin-left: $i + px !important;
+            margin-right: $i + px !important;
+        }
+    }
+}
+
+// Margin-top-bottom
+@for $i from $minSpace through $maxSpace {
+    @if $i%5==0 {
+        .m-tb-#{$i} {
+            margin-top: $i + px !important;
+            margin-bottom: $i + px !important;
+        }
+    }
+}
+
+// margon-auto
+.m-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+@mixin width($size) {
+    width: $size;
+    @extend .m-auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+    @extend .m-auto;
+
+    @include forWidth(991.98px) {
+        width: 100%;
+    }
+}
+
+.w-50 {
+    width: 50%;
+    @extend .m-auto;
+
+    @include forWidth(991.98px) {
+        width: 75%;
+    }
+
+    @include forWidth(767.98px) {
+        width: 100%;
+    }
+}
+
+.w-25 {
+    width: 25%;
+    @extend .m-auto;
+
+    @include forWidth(991.98px) {
+        width: 50%;
+    }
+
+    @include forWidth(767.98px) {
+        width: 100%;
+    }
+}
+
+.fx-vertical-center {
+    align-items: center;
+}
+
+.fx-horizontal-center {
+    justify-content: center;
+}
+
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin appereance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}

@@ -1,0 +1,73 @@
+$pc-1: #0f67ea;
+$pc-2: #ff8748;
+$pc-3: #243342;
+$pc-4: #f5f7f8;
+
+$primary-colors: ($pc-1, $pc-2, $pc-3, $pc-4);
+
+@for $colIndex from 1 through length($primary-colors) {
+    .cl-pc-#{$colIndex} {
+        color: nth($primary-colors, $colIndex);
+    }
+
+    .bg-pc-#{$colIndex} {
+        background: nth($primary-colors, $colIndex)
+    }
+}
+
+$sc-1:#FFFFFF;
+$sc-2:#000000;
+$sc-3:#add3ff;
+$sc-4:#4a5468;
+$sc-5:#f5f7f8;
+$sc-6:#3b4a59;
+
+$secondary-colors: ($sc-1, $sc-2, $sc-3, $sc-4, $sc-5, $sc-6);
+
+@for $colIndex from 1 through length($secondary-colors) {
+    .cl-sc-#{$colIndex} {
+        color: nth($secondary-colors, $colIndex);
+    }
+
+    .bg-sc-#{$colIndex} {
+        background: nth($secondary-colors, $colIndex);
+    }
+}
+
+// Browser text Selection
+
+::-moz-selection {
+    color: $sc-1;
+    background: $pc-3;
+}
+
+::selection {
+    color: $sc-1;
+    background: $pc-3;
+}
+
+
+// Placeholder
+@mixin placeholder($color) {
+    ::placeholder {
+        color: $color;
+        letter-spacing: 0.5px;
+    }
+
+    :-ms-input-placeholder {
+        color: $color;
+        letter-spacing: 0.5px;
+    }
+
+    ::-ms-input-placeholder {
+        color: $color;
+        letter-spacing: 0.5px;
+    }
+}
+
+// mixin for media query
+@mixin forWidth($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}

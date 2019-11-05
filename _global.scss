@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $ff-reg;
+    color: $pc-3;
+    font-size: 14px;
+
+    #wrapper {
+        padding-top: 0;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: normal;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: $ff-bo;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: $ff-bo;
+}
+
+h3 {
+    font-size: 26px;
+    font-family: $ff-bo;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: $ff-bo;
+}
+
+h5 {
+    font-size: 18px;
+    font-family: $ff-bo;
+}
+
+h6 {
+    font-size: 14px;
+    font-family: $ff-bo;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    color: $pc-1;
+    text-decoration: none;
+
+    &:hover {
+        color: $pc-2;
+    }
+}
+
+ul {
+    li {
+        a {
+            display: inline-block;
+        }
+    }
+
+    &.inline {
+        li {
+            list-style: none;
+            display: inline;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
